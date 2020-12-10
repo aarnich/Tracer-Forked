@@ -21,6 +21,7 @@ namespace ArtPlantMall.iOS
         {
             Forms.SetFlags("CollectionView_Experimental");
             Forms.Init();
+            Rg.Plugins.Popup.Popup.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             LoadApplication(new App());
 

@@ -12,7 +12,8 @@ namespace ArtPlantMall.ViewModel
     {
         private ObservableCollection<Plant> _plants;
         private Plant _selectedPlant;
-        public ObservableCollection<BasketItem> _basket;
+        private FirebaseService _firebase = new FirebaseService();
+        public ObservableCollection<Activity> _basket;
         public decimal _total;
 
         public PlantMallViewModel()
@@ -40,7 +41,7 @@ namespace ArtPlantMall.ViewModel
             }
         }
 
-        public ObservableCollection<BasketItem> Basket
+        public ObservableCollection<Activity> Basket
         {
             get { return _basket; }
             set
@@ -62,11 +63,11 @@ namespace ArtPlantMall.ViewModel
 
         public ICommand SelectCommand => new Command(NavigateToPlantDetail);
 
-        private void LoadPlants()
+        private async void LoadPlants()
         {
             Plants = new ObservableCollection<Plant>(PlantsService.Instance.GetPlants());
-            var actualBasket = BasketService.Instance.GetActualBasket();
-            Basket = new ObservableCollection<BasketItem>(actualBasket);
+            var actualBasket = await BasketService.Instance.GetActualBasket();
+            Basket = new ObservableCollection<Activity>(actualBasket);
         }
 
         private void NavigateToPlantDetail()

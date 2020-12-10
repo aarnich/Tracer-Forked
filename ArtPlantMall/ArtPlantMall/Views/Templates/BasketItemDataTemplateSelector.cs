@@ -10,7 +10,7 @@ namespace ArtPlantMall.Views.Templates
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
-            return ((BasketItem)item).BasketItemType == BasketItemType.Plant ? PlantTemplate : DeliveryTemplate;
+            return ((Activity)item).BasketItemType == BasketItemType.Plant ? PlantTemplate : DeliveryTemplate;
         }
     }
 }

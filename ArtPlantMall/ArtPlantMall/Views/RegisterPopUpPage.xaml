@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="ArtPlantMall.Views.RegisterPopUpPage"
+             BackgroundColor="White">
+    <StackLayout Margin="20, 10" VerticalOptions="Center" HorizontalOptions="Center">
+        <Entry Placeholder="Email" PlaceholderColor="Black" x:Name="TxtEmail"></Entry>
+        <Entry IsPassword="True" Placeholder="Password" PlaceholderColor="Black" x:Name="TxtPWord"></Entry>
+        <Entry IsPassword="True" Placeholder="Confirm Password" PlaceholderColor="Black" x:Name="TxtConPWord"></Entry>
+        <Button Text="Register" Clicked="Register"></Button>
+    </StackLayout>
+</pages:PopupPage>

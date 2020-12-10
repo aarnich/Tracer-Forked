@@ -1,12 +1,14 @@
 ﻿using ArtPlantMall.Models;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ArtPlantMall.Services
 {
     public class BasketService
     {
-        public static BasketService _instance;
+        private static BasketService _instance;
+        private FirebaseService _firebase = new FirebaseService();
 
         public static BasketService Instance
         {
@@ -19,13 +21,9 @@ namespace ArtPlantMall.Services
             }
         }
 
-        public List<BasketItem> GetActualBasket()
+        public async Task<List<Activity>> GetActualBasket()
         {
-            return new List<BasketItem>
-            {
-                new BasketItem { BasketItemType = BasketItemType.Plant, Content = "Today I marched down the hallway and spotted Josh naked. I masturbated to his fat fucking ass", Icon = "sebastian.png", Time= DateTime.Now.ToString("h tt")},
-                new BasketItem { BasketItemType = BasketItemType.Plant, Content = "Today I jerked off to my teachers. This one particular teacher was extremely thicc, maybe even, too thicc", Icon = "sebastian.png", Time= DateTime.Now.ToString("h tt")},
-            };
+            return await _firebase.GetAllCurrentUserActivity();
         }
     }
 }

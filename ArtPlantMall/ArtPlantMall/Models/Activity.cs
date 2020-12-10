@@ -6,7 +6,7 @@
         Delivery
     }
 
-    public class BasketItem
+    public class Activity
     {
         public BasketItemType BasketItemType { get; set; }
         public int Counter { get; set; }
@@ -15,6 +15,7 @@
         public string Time { get; set; }
         public string Location { get; set; }
         public string Icon { get; set; }
-        public string UserID { get; set; }
+        public string UserId { get; set; }
+        public string ActivityId { get; set; }
     }
 }
