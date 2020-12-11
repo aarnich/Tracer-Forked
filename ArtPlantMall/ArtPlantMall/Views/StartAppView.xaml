@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArtPlantMall.Views.StartAppView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Email" PlaceholderColor="Black" x:Name="TxtEmail"></Entry>
+            <Entry Placeholder="Password" PlaceholderColor="Black" x:Name="TxtPassword"></Entry>
+            <Button Text="Log In" x:Name="BtnLogIn" Clicked="LoggingIn"></Button>
+            <Label x:Name="LblRegister" Text="No Account, Register Now!" TextColor="Black">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ShowRegisterPopUp"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

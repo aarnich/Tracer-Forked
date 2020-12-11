@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="ArtPlantMall.Views.AddActivityPopPage"
+             BackgroundColor="White">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Editor x:Name="TxtContent"></Editor>
+        <DatePicker x:Name="DprDoa"></DatePicker>
+        <TimePicker x:Name="TprToa"></TimePicker>
+        <Picker x:Name="CmbLocations"></Picker>
+        <Button Text="Add" Clicked="AddToDatabase"></Button>
+    </StackLayout>
+</pages:PopupPage>

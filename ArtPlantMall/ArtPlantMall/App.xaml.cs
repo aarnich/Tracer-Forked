@@ -1,6 +1,7 @@
 ﻿using ArtPlantMall.Services;
 using ArtPlantMall.Views;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,14 +13,19 @@ namespace ArtPlantMall
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new PlantMallView())
+            if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseRefreshToken", "")))
             {
-
-            };
-            InitNavigation();
+                MainPage = new NavigationPage(new PlantMallView());
+                InitNavigation();
+            }
+            else
+            {
+                MainPage = new NavigationPage(new StartAppView());
+            }
+            
         }
 
-        Task InitNavigation()
+        public static Task InitNavigation()
         {
             return NavigationService.Instance.InitializeAsync();
         }

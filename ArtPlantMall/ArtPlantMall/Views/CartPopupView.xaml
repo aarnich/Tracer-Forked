@@ -210,6 +210,9 @@
                     CornerRadius="24, 0, 24, 0"
                     BackgroundColor="{StaticResource WhiteColor}"
                     Margin="24, 0, 0, 0">
+                    <pancake:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ShowAddActivityPopUp"></TapGestureRecognizer>
+                    </pancake:PancakeView.GestureRecognizers>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60" />

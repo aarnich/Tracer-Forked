@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArtPlantMall.Views.InputUserDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="UserName" x:Name="TxtUName"></Entry>
+            <Entry Placeholder="FirstName" x:Name="TxtFName"></Entry>
+            <Entry Placeholder="LastName" x:Name="TxtLName"></Entry>
+            <Entry Placeholder="Address" x:Name="TxtAddress"></Entry>
+            <Entry Placeholder="Occupation" x:Name="TxtOccupation"></Entry>
+            <Label Text="Date of Birth"></Label>
+            <DatePicker x:Name="DprBirthDate"></DatePicker>
+            <Button Text="Add User Details" Clicked="AddUserDetails"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

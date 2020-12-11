@@ -1,4 +1,5 @@
 ﻿using System;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace ArtPlantMall.Views
@@ -34,6 +35,11 @@ namespace ArtPlantMall.Views
             VisualStateManager.GoToState(BasketSummary, visualState);
             VisualStateManager.GoToState(CollapseButton, visualState);
             VisualStateManager.GoToState(ExpandButton, visualState);
+        }
+
+        private void ShowAddActivityPopUp(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new AddActivityPopPage());
         }
     }
 }
