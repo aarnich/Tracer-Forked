@@ -1,17 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ArtPlantMall.Views.StartAppView">
+             x:Class="ArtPlantMall.Views.StartAppView"
+             BackgroundColor="CornflowerBlue">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Entry Placeholder="Email" PlaceholderColor="Black" x:Name="TxtEmail"></Entry>
-            <Entry Placeholder="Password" PlaceholderColor="Black" x:Name="TxtPassword"></Entry>
-            <Button Text="Log In" x:Name="BtnLogIn" Clicked="LoggingIn"></Button>
-            <Label x:Name="LblRegister" Text="No Account, Register Now!" TextColor="Black">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="ShowRegisterPopUp"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-            </Label>
-        </StackLayout>
+        <Frame BackgroundColor="CornflowerBlue" 
+               BorderColor="White" 
+               CornerRadius="10"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand" 
+                         HorizontalOptions="CenterAndExpand">
+                <Image Source="logo.png"
+                       Aspect="AspectFit" 
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                <Label Text="E-Mail"/>
+                <Entry Placeholder="E-Mail Address" x:Name="TxtEmail"/>
+                <Label Text="Password"/>
+                <Entry Placeholder="Password" x:Name="TxtPassword"/>
+                <Button Text="Log In" x:Name="BtnLogIn" Clicked="LoggingIn"/>
+                <Label x:Name="LblRegister" Text="No Account? Register here!">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ShowRegisterPopUp"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </Frame>
     </ContentPage.Content>
 </ContentPage>

@@ -1,17 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ArtPlantMall.Views.InputUserDetailsPage">
+             x:Class="ArtPlantMall.Views.InputUserDetailsPage"
+             BackgroundColor="CornflowerBlue">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="DatePicker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Entry Placeholder="UserName" x:Name="TxtUName"></Entry>
-            <Entry Placeholder="FirstName" x:Name="TxtFName"></Entry>
-            <Entry Placeholder="LastName" x:Name="TxtLName"></Entry>
-            <Entry Placeholder="Address" x:Name="TxtAddress"></Entry>
-            <Entry Placeholder="Occupation" x:Name="TxtOccupation"></Entry>
-            <Label Text="Date of Birth"></Label>
-            <DatePicker x:Name="DprBirthDate"></DatePicker>
-            <Button Text="Add User Details" Clicked="AddUserDetails"></Button>
-        </StackLayout>
+        <Frame BackgroundColor="CornflowerBlue"
+               BorderColor="White"
+               CornerRadius="5"
+               Margin="15"
+               Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="StartAndExpand"
+                             WidthRequest="350"
+                             Spacing="15">
+                    <Label Text="Username"/>
+                    <Entry Placeholder="Username" x:Name="TxtUName"/>
+                    <Label Text="First Name"/>
+                    <Entry Placeholder="First Name" x:Name="TxtFName"/>
+                    <Label Text="Last Name"/>
+                    <Entry Placeholder="Last Name" x:Name="TxtLName"/>
+                    <Label Text="Address"/>
+                    <Entry Placeholder="Address" x:Name="TxtAddress"/>
+                    <Label Text="Occupation"/>
+                    <Entry Placeholder="Occupation" x:Name="TxtOccupation"/>
+                    <Label Text="Date of Birth"/>
+                    <DatePicker x:Name="DprBirthDate"/>
+                </StackLayout>
+                <Button Grid.Row="2" Text="Add User Details" Clicked="AddUserDetails"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        HeightRequest="75"
+                        WidthRequest="200"/>
+            </Grid>
+        </Frame>
     </ContentPage.Content>
 </ContentPage>
