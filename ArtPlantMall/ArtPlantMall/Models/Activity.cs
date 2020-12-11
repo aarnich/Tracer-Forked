@@ -1,4 +1,6 @@
-﻿namespace ArtPlantMall.Models
+﻿using System.Collections.Generic;
+
+namespace ArtPlantMall.Models
 {
     public enum BasketItemType
     {
@@ -17,5 +19,7 @@
         public string Icon { get; set; }
         public string UserId { get; set; }
         public string ActivityId { get; set; }
+        public List<LocationSafety> LocationSafety { get; set; }
+
     }
 }

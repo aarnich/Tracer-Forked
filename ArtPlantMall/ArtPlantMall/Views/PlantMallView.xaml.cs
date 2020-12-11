@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using Rg.Plugins.Popup.Services;
+using System;
+using Xamarin.Forms;
 
 namespace ArtPlantMall.Views
 {
@@ -51,6 +53,22 @@ namespace ArtPlantMall.Views
             CartPopupFade.FadeTo(0, CollapseAnimationSpeed, Easing.SinInOut);
             CartPopupFade.IsVisible = false;
             CartPopup.TranslateTo(0, pageHeight - CartPopup.HeaderHeight, CollapseAnimationSpeed, Easing.SinInOut);
+        }
+        private void ShowActivityHistory(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new ActivityHistoryView());
+        }
+        private void ShowCovidStats(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new CovidStats());
+        }
+        private void ShowUserInfo(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new UserInfo());
+        }
+        private void ShowMapView(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new MapView());
         }
     }
 }

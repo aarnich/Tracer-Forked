@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:ArtPlantMall.Views"
-             xmlns:templates="clr-namespace:ArtPlantMall.Views.Templates" xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:templates="clr-namespace:ArtPlantMall.Views.Templates" xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:pancake1="http://xamarin.com/schemas/2014/forms/design"
              x:Class="ArtPlantMall.Views.PlantMallView"
              BackgroundColor="White"
              x:Name="RootPage">
@@ -55,7 +55,11 @@
                         <ffimageloading:CachedImage
                         Aspect="AspectFill"
                         Source="angelica.png"/>
-                        </pancake:PancakeView>
+                        <pancake:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                    Tapped="ShowActivityHistory" />
+                        </pancake:PancakeView.GestureRecognizers>
+                    </pancake:PancakeView>
                     <pancake:PancakeView
                         Grid.Row="0"
                         Grid.Column="1"
@@ -65,6 +69,10 @@
                         <ffimageloading:CachedImage
                         Aspect="AspectFill"
                         Source="angelica.png"/>
+                        <pancake:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                    Tapped="ShowCovidStats" />
+                        </pancake:PancakeView.GestureRecognizers>
                     </pancake:PancakeView>
                     <pancake:PancakeView
                         Grid.Row="1"
@@ -75,6 +83,10 @@
                         <ffimageloading:CachedImage
                         Aspect="AspectFill"
                         Source="angelica.png"/>
+                        <pancake:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                    Tapped="ShowMapView" />
+                        </pancake:PancakeView.GestureRecognizers>
                     </pancake:PancakeView>
                     <pancake:PancakeView
                         Grid.Row="1"
@@ -85,6 +97,10 @@
                         <ffimageloading:CachedImage
                         Aspect="AspectFill"
                         Source="angelica.png"/>
+                        <pancake:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                    Tapped="ShowUserInfo" />
+                        </pancake:PancakeView.GestureRecognizers>
                     </pancake:PancakeView>
                 </Grid>
                 <!--CollectionView

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="ArtPlantMall.Views.ActivityHistoryView"
+             BackgroundColor="White"
+             >
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="DatePicker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="TimePicker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Picker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="TitleColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+
+        </ResourceDictionary>
+
+    </pages:PopupPage.Resources>
+    <Grid>
+        
+    <Grid Padding="25,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+        <BoxView Grid.Row="2" Grid.Column="0"  VerticalOptions="Start" WidthRequest="4" Color="#bfc0c0" HeightRequest="70" Margin="25,-50,25,10"/>
+        <!-- Date description-->
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="Monday, 5th&#10;April" Margin="10,-50,0,0" TextColor="#535257" FontSize="45"/>
+
+        <!-- Shedule list structure-->
+        <CollectionView ItemsSource="{Binding history}"
+                                 Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"
+                                 VerticalOptions="Start">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                        <!-- Schedule time-->
+                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Date}"  TextColor="#bfc0c0" VerticalOptions="Start"/>
+                        <!-- Vertical Line-->
+                        <BoxView Grid.Row="1" Grid.Column="0" WidthRequest="4" Color="Silver" HeightRequest="120" Margin="25,0,50,0" />
+                        <!-- Card -->
+                        <Frame Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" CornerRadius="25" HasShadow="False" Margin="5,0,30,60">
+                                <StackLayout>
+                                    <Label Text="{Binding Time}"  TextColor="#535257" FontSize="18"/>
+                                    <Label Text="{Binding Content}" TextColor="Silver" FontSize="18"/>
+                                    <!-- Features-->
+                                    <CollectionView ItemsSource="{Binding LocationSafety}"
+                                                             Margin="0,20,0,0"
+                                                             HeightRequest="50"
+                                                             >
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackLayout Margin="0,0,10,0">
+                                                    <Label Text="{Binding Name}" BackgroundColor="{Binding BGColor}" FontAttributes="Bold" TextColor="{Binding TxColor}" Margin="10" HorizontalOptions="Start"/>
+                                                </StackLayout>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+                                </StackLayout>
+                            </Frame>
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+    </Grid>
+
+</pages:PopupPage>

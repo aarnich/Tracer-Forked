@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="ArtPlantMall.Views.CovidStats"
+             BackgroundColor="White"
+             >
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="DatePicker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="TimePicker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Picker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="TitleColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+
+        </ResourceDictionary>
+
+    </pages:PopupPage.Resources>
+</pages:PopupPage>
