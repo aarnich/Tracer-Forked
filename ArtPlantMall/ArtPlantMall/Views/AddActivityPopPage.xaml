@@ -3,12 +3,71 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
              x:Class="ArtPlantMall.Views.AddActivityPopPage"
-             BackgroundColor="White">
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-        <Editor x:Name="TxtContent"></Editor>
-        <DatePicker x:Name="DprDoa"></DatePicker>
-        <TimePicker x:Name="TprToa"></TimePicker>
-        <Picker x:Name="CmbLocations"></Picker>
-        <Button Text="Add" Clicked="AddToDatabase"></Button>
-    </StackLayout>
+             BackgroundColor="CornflowerBlue">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="DatePicker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="TimePicker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Picker">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="TitleColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <Frame BorderColor="White"
+           BackgroundColor="CornflowerBlue"
+           CornerRadius="5"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="CenterAndExpand">
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="CenterAndExpand"
+                 WidthRequest="250">
+            <Label Text="Description"/>
+            <Editor x:Name="TxtContent" Placeholder="Description"/>
+            <Label Text="Date of Activity"/>
+            <DatePicker x:Name="DprDoa"/>
+            <Label Text="Time of Activity"/>
+            <TimePicker x:Name="TprToa"/>
+            <Label Text="Location"/>
+            <Picker x:Name="CmbLocations" Title="Location"/>
+            <Button Text="Confirm" Clicked="AddToDatabase"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="150"
+                    HeightRequest="50"/>
+        </StackLayout>
+    </Frame>
 </pages:PopupPage>

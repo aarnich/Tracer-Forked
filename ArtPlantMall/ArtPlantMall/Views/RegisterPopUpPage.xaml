@@ -3,11 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
              x:Class="ArtPlantMall.Views.RegisterPopUpPage"
-             BackgroundColor="White">
-    <StackLayout Margin="20, 10" VerticalOptions="Center" HorizontalOptions="Center">
-        <Entry Placeholder="Email" PlaceholderColor="Black" x:Name="TxtEmail"></Entry>
-        <Entry IsPassword="True" Placeholder="Password" PlaceholderColor="Black" x:Name="TxtPWord"></Entry>
-        <Entry IsPassword="True" Placeholder="Confirm Password" PlaceholderColor="Black" x:Name="TxtConPWord"></Entry>
-        <Button Text="Register" Clicked="Register"></Button>
-    </StackLayout>
+             BackgroundColor="CornflowerBlue">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <Frame BorderColor="White"
+           BackgroundColor="CornflowerBlue"
+           CornerRadius="5"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="CenterAndExpand">
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="CenterAndExpand"
+                 WidthRequest="250">
+            <Label Text="E-Mail Address"/>
+            <Entry Placeholder="Email" x:Name="TxtEmail"/>
+            <Label Text="Password"/>
+            <Entry IsPassword="True" Placeholder="Password" x:Name="TxtPWord"/>
+            <Label Text="Confirm Password"/>
+            <Entry IsPassword="True" Placeholder="Confirm Password" x:Name="TxtConPWord"/>
+            <Button Text="Register" Clicked="Register"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="150"
+                    HeightRequest="50"/>
+        </StackLayout>
+    </Frame>
 </pages:PopupPage>
