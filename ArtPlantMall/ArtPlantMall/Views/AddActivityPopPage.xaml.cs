@@ -26,11 +26,10 @@ namespace ArtPlantMall.Views
         private async void AddToDatabase(object sender, EventArgs e)
         {
             var content = TxtContent.Text;
-            var date = DprDoa.Date.ToString("d");
-            var time = TprToa.Time.ToString();
+            var time = DateTime.Parse(TprToa.Time.ToString()).ToString("t");
             var location = CmbLocations.SelectedItem.ToString();
 
-            await _firebase.AddActivity(content, StartAppView.Email, date, time, location);
+            await _firebase.AddActivity(content, StartAppView.Email, time, location);
             await PopupNavigation.Instance.PopAsync();
             await App.InitNavigation();
         }

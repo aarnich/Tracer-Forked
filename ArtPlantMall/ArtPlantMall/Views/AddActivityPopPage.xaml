@@ -57,8 +57,6 @@
                  WidthRequest="250">
             <Label Text="Description"/>
             <Editor x:Name="TxtContent" Placeholder="Description"/>
-            <Label Text="Date of Activity"/>
-            <DatePicker x:Name="DprDoa"/>
             <Label Text="Time of Activity"/>
             <TimePicker x:Name="TprToa"/>
             <Label Text="Location"/>
