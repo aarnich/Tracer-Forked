@@ -23,7 +23,7 @@
 
             <Style x:Key="ProductNameStyle" TargetType="Label">
                 <Setter Property="FontFamily" Value="{StaticResource Futura}" />
-                <Setter Property="FontSize" Value="{StaticResource FontSize16}" />
+                <Setter Property="FontSize" Value="{StaticResource FontSize20}" />
                 <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="Margin" Value="6, 0" />
@@ -43,18 +43,10 @@
     <ContentView.Content>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="50"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <ffimageloading:CachedImage
-                Grid.Column="0"
-                Aspect="AspectFit"
-                Source="{Binding Icon}"
-                Style="{StaticResource ProductImageStyle}">
-                <ffimageloading:CachedImage.Transformations>
-                    <transformations:CircleTransformation />
-                </ffimageloading:CachedImage.Transformations>
-            </ffimageloading:CachedImage>
+
             <Grid
                 Grid.Column="1">
                 <Grid.RowDefinitions>

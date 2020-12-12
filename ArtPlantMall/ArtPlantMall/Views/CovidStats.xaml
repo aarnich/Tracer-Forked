@@ -2,7 +2,7 @@
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             x:Class="ArtPlantMall.Views.CovidStats"
+                 x:Class="ArtPlantMall.Views.CovidStats"
              BackgroundColor="White"
              >
     <pages:PopupPage.Resources>
@@ -45,8 +45,10 @@
                 <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
                 <Setter Property="TextColor" Value="Blue"/>
             </Style>
-
         </ResourceDictionary>
-
     </pages:PopupPage.Resources>
+    <StackLayout>
+        <Label Text="COVID-19 Outbreak" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center" />
+        <WebView Source="https://www.outbreak.my" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </StackLayout>
 </pages:PopupPage>

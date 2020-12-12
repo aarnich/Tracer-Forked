@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             x:Class="ArtPlantMall.Views.UserInfo"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+                 x:Class="ArtPlantMall.Views.UserInfo"
              BackgroundColor="White"
              >
     <pages:PopupPage.Resources>
@@ -47,6 +47,107 @@
             </Style>
 
         </ResourceDictionary>
-
+    
     </pages:PopupPage.Resources>
+    <Grid
+        RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- header background-->
+
+        <Image
+            Source="Header.png"
+            Aspect="AspectFill" />
+        <Image
+            Margin="0,-1"
+            Source="CurvedMask.png"
+            VerticalOptions="End"
+            Aspect="AspectFill" />
+        <!-- profile name-->
+        <StackLayout
+            Padding="0,50,0,0"
+            Grid.Row="1">
+            <Label
+                Text="Elizabeth Roberts"
+                Style="{StaticResource ProfileNameLabel}" />
+            <Label
+                Text="Research Specialist"
+                Style="{StaticResource ProfileTagLabel}" />
+        </StackLayout>
+        <!-- social stats-->
+        <Grid
+            Margin="0,30"
+            ColumnSpacing="0"
+            Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Column="0">
+                <Label
+                    Text="100"
+                    Style="{StaticResource StatsNumberLabel}" />
+                <Label
+                    Text="Safety Score"
+                    Style="{StaticResource StatsCaptionLabel}" />
+            </StackLayout>
+            <StackLayout
+                Grid.Column="1">
+                <Label
+                    Text="47"
+                    Style="{StaticResource StatsNumberLabel}" />
+                <Label
+                    Text="Activities Tracked"
+                    Style="{StaticResource StatsCaptionLabel}" />
+            </StackLayout>
+            <StackLayout
+                Grid.Column="2">
+                <Label
+                    Text="7"
+                    Style="{StaticResource StatsNumberLabel}" />
+                <Label
+                    Text="Encountered Users"
+                    Style="{StaticResource StatsCaptionLabel}" />
+            </StackLayout>
+        </Grid>
+        <!-- profile description-->
+        <Label
+            Grid.Row="3"
+            Text="I have a masters degree in Chemistry, in which my research work focused on nanotechnology and sensor device fabrication via inkjet printing. I have experience on working as a Chemistry instructor. Currently, I am working as a researcher/science research specialist under a DOST-PCIEERD project. "
+            Style="{StaticResource MainBodyLabel}"
+            Margin="20,0" />
+        <!-- follow button-->
+        <Button
+            Grid.Row="4"
+            Text="Logout"
+            Margin="20"
+            Style="{StaticResource FollowButton}" />
+        <!-- Profile Image-->
+        <ffimageloading:CachedImage
+            Source="User.png"
+            WidthRequest="100"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            TranslationY="50">
+            <ffimageloading:CachedImage.Transformations>
+                <transformations:CircleTransformation />
+            </ffimageloading:CachedImage.Transformations>
+        </ffimageloading:CachedImage>
+    </Grid>
 </pages:PopupPage>
