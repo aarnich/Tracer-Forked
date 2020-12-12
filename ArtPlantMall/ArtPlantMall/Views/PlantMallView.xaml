@@ -40,8 +40,8 @@
             <!-- MAIN CONTENT PANEL -->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="75" />
-                    <RowDefinition Height="500" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="525" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
