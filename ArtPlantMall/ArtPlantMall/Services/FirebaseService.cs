@@ -34,13 +34,12 @@ namespace ArtPlantMall.Services
             });
         }
 
-        public async Task AddActivity(string content, string email, string date, string time, string location)
+        public async Task AddActivity(string content, string email, string time, string location)
         {
             await _firebase.Child("activitydetails").PostAsync(new Activity()
             {
                 Content = content,
                 UserId = email,
-                Date = date,
                 Time = time,
                 Location = location,
                 Icon = "sebastian.png"
