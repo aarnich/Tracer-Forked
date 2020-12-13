@@ -61,6 +61,10 @@
                 Grid.Row="1"
                 Text="{Binding Time}"
                 Style="{StaticResource UnitPriceStyle}"/>
+                <Label x:Name="ID"
+                       HeightRequest="0"
+                       WidthRequest="0"
+                       Text="{Binding ActivityId}"/>
             </Grid>
 
         </Grid>
