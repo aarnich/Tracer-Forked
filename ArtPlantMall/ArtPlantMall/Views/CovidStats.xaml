@@ -4,5 +4,5 @@
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
                  x:Class="ArtPlantMall.Views.CovidStats"
              BackgroundColor="White">
-    <WebView Source="https://covid19stats.ph/"/>
+    <Grid x:Name="BrowserGrid"></Grid>
 </pages:PopupPage>
