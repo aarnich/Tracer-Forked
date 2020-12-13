@@ -4,5 +4,5 @@
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
              x:Class="ArtPlantMall.Views.MapView"
              BackgroundColor="White">
-    <WebView x:Name="browser" Source="https://www.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61"/>
+    <WebView x:Name="browser"/>
 </pages:PopupPage>
