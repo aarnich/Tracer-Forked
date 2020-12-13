@@ -62,7 +62,6 @@
                 Text="{Binding Time}"
                 Style="{StaticResource UnitPriceStyle}"/>
             </Grid>
-
         </Grid>
     </ContentView.Content>
 </ContentView>

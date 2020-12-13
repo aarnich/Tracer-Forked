@@ -1,4 +1,8 @@
-﻿using Xamarin.Forms;
+﻿using ArtPlantMall.Services;
+using ArtPlantMall.Models;
+using System;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace ArtPlantMall.Views.Templates
 {
