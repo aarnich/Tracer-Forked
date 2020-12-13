@@ -13,7 +13,6 @@ namespace ArtPlantMall.Views
     {
         public MapView()
         {
-
             InitializeComponent();
         }
     }
