@@ -1,4 +1,6 @@
 ﻿using System;
+using ArtPlantMall.Models;
+using ArtPlantMall.Services;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
@@ -40,6 +42,15 @@ namespace ArtPlantMall.Views
         private void ShowAddActivityPopUp(object sender, EventArgs e)
         {
             PopupNavigation.Instance.PushAsync(new AddActivityPopPage());
+        }
+
+        private async void DeleteActivity(object sender, ItemTappedEventArgs e)
+        {
+            var activity = (Activity) e.Item;
+            var activityId = activity.ActivityId;
+            var firebase = new FirebaseService();
+            await firebase.DeleteActivity(activityId);
+            await App.InitNavigation();
         }
     }
 }
