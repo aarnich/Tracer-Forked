@@ -199,7 +199,10 @@
                     HasUnevenRows="True"
                     SeparatorVisibility="None"
                     SelectionMode="None"
-                    Margin="0, 6"/>
+                    Margin="0, 6"
+                    ItemTapped="DeleteActivity">
+                    
+                </ListView>
 
 
                 <!-- ADD ACTIVITY -->
