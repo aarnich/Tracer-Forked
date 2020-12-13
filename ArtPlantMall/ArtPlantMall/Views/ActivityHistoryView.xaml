@@ -34,11 +34,11 @@
 
             <StackLayout Orientation="Horizontal" Spacing="10">
                 <!-- Date description-->
-                <Label Grid.Row="1" Grid.Column="1" 
-                       Grid.ColumnSpan="2" 
-                       Text="April 5th,&#10;Monday" 
-                       TextColor="White" 
-                       FontSize="30"/>
+               <Label Grid.Row="1" Grid.Column="1" 
+               Grid.ColumnSpan="2" 
+               Text="December 2020" 
+               TextColor="White" 
+               FontSize="30"/>
             </StackLayout>
             <BoxView Grid.Row="2"
                      WidthRequest="350"
