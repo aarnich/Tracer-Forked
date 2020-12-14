@@ -12,6 +12,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
                 <Setter Property="TextColor" Value="White"/>
             </Style>
+            
         </ResourceDictionary>
     </pages:PopupPage.Resources>
     
