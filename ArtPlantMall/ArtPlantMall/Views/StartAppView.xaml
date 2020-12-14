@@ -11,6 +11,14 @@
                 <Setter Property="TextColor" Value="White"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="Title">
+                <Setter Property="FontSize" Value="28"/>
+                <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
+                <Setter Property="TextColor" Value="{StaticResource LightGreenColor}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
             <Style TargetType="Entry">
                 <Setter Property="FontSize" Value="Medium"/>
                 <Setter Property="FontFamily" Value="{StaticResource FuturaMedium}"/>
@@ -34,10 +42,7 @@
                HorizontalOptions="CenterAndExpand">
             <StackLayout VerticalOptions="CenterAndExpand" 
                          HorizontalOptions="CenterAndExpand">
-                <Image Source="logo.png"
-                       Aspect="AspectFit" 
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"/>
+                <Label Text="Contraice" Style="{StaticResource Title}"/>
                 <Label Text="E-Mail"/>
                 <Entry Placeholder="E-Mail Address" x:Name="TxtEmail"/>
                 <Label Text="Password"/>

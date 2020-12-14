@@ -12,7 +12,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource FuturaHeavy}" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontSize" Value="35" />
-                <Setter Property="TextColor" Value="CornflowerBlue" />
+                <Setter Property="TextColor" Value="{StaticResource LightGreenColor}"/>
             </Style>
             
             <Style x:Key="QuantityStyle" TargetType="Label">
@@ -44,7 +44,7 @@
                 <Grid Grid.Row="1">
                     <StackLayout>
                         <Label 
-                        Text="TraceBlazer"
+                        Text="Contraice"
                         Style="{StaticResource TitleStyle}"
                         Margin="10,0"/>
                         <Label
